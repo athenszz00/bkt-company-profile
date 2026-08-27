@@ -78,7 +78,8 @@ img {
 
   padding: 14px 0;
 
-  background: rgba(255, 255, 255, 0.92);
+  /* navbar awal */
+  background: rgba(255, 255, 255, 0.96);
 
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -86,13 +87,20 @@ img {
   border-bottom: 1px solid transparent;
 
   transition:
+    background 0.3s ease,
     box-shadow 0.3s ease,
-    border-color 0.3s ease,
-    background 0.3s ease;
+    border-color 0.3s ease;
 }
 
+
+/* ketika halaman discroll */
+
 .nav--scrolled {
-  box-shadow: 0 8px 30px rgba(5, 25, 45, 0.08);
+  background: #ffffff;
+
+  box-shadow:
+    0 8px 30px rgba(5, 25, 45, 0.10);
+
   border-color: #e8eef3;
 }
 
