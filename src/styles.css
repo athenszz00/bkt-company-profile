@@ -534,45 +534,150 @@ img {
 
 
 /* =========================================================
-   STATS
+   HIGHLIGHTS CARDS
 ========================================================= */
 
-.stats {
-  background: white;
+.highlights-section {
+  position: relative;
 
-  border-bottom: 1px solid #e7eef4;
+  padding: 42px 0 58px;
+
+  background: #f4f8fb;
 }
 
-.stats__grid {
+
+/* GRID */
+
+.highlights-grid {
   display: grid;
 
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 18px;
 }
 
-.stat {
-  padding: 30px 22px;
 
-  border-right: 1px solid #e7eef4;
+/* CARD */
+
+.highlight-card {
+  position: relative;
+
+  min-height: 155px;
+
+  padding: 26px 24px;
+
+  overflow: hidden;
+
+  border: 1px solid #e3ebf1;
+  border-radius: 20px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 12px 35px rgba(7, 26, 47, 0.07);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
 }
 
-.stat:last-child {
-  border-right: 0;
+
+/* GARIS AKSEN ATAS */
+
+.highlight-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 24px;
+
+  width: 42px;
+  height: 3px;
+
+  border-radius: 0 0 999px 999px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--blue),
+      var(--green)
+    );
+
+  transition:
+    width 0.35s ease;
 }
 
-.stat strong {
+
+/* NOMOR KECIL 01, 02, 03, 04 */
+
+.highlight-card__number {
   display: block;
 
-  font-family: 'Space Grotesk', sans-serif;
+  margin-bottom: 18px;
 
-  font-size: 30px;
+  font-size: 10px;
+  font-weight: 800;
 
-  color: #0d7fc0;
+  letter-spacing: 0.16em;
+
+  color: #8ca0b2;
 }
 
-.stat span {
+
+/* ANGKA / VALUE */
+
+.highlight-card strong {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-family:
+    'Space Grotesk',
+    sans-serif;
+
+  font-size: clamp(25px, 2.2vw, 32px);
+  font-weight: 700;
+
+  line-height: 1.1;
+
+  letter-spacing: -0.025em;
+
+  color: var(--navy);
+}
+
+
+/* DESCRIPTION */
+
+.highlight-card p {
+  margin: 0;
+
   font-size: 13px;
+  font-weight: 600;
+
+  line-height: 1.55;
 
   color: var(--muted);
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.highlight-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(5, 135, 213, 0.22);
+
+  box-shadow:
+    0 20px 45px rgba(7, 26, 47, 0.12);
+}
+
+
+.highlight-card:hover::before {
+  width: calc(100% - 48px);
 }
 
 
@@ -598,39 +703,172 @@ img {
 
 
 /* =========================================================
-   ABOUT
+   ABOUT HIGHLIGHTS
 ========================================================= */
 
-.about {
-  background: #ffffff;
-}
-
-.about__grid {
+.about-highlights {
   display: grid;
 
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
 
-  gap: 90px;
+  gap: 18px;
 
-  align-items: start;
+  margin-bottom: 85px;
 }
 
-.about__copy {
-  font-size: 16px;
 
-  line-height: 1.85;
+/* =========================================================
+   CARD
+========================================================= */
 
-  color: var(--muted);
+.about-highlight-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 155px;
+
+  padding: 26px 24px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      #071a2f,
+      #0b2745
+    );
+
+  box-shadow:
+    0 18px 42px rgba(7, 26, 47, 0.16);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
 }
 
-.about__copy p:first-child {
-  margin-top: 0;
+
+/* =========================================================
+   INDEX 01 / 02 / 03 / 04
+========================================================= */
+
+.about-highlight-card__index {
+  display: block;
+
+  margin-bottom: 12px;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 0.16em;
+
+  color: rgba(255, 255, 255, 0.45);
 }
 
-.about__copy p:last-child {
-  margin-bottom: 0;
+
+/* =========================================================
+   VALUE
+   20+ / 50+ / INDONESIA / EXPERIENCED
+========================================================= */
+
+.about-highlight-card strong {
+  position: relative;
+
+  display: inline-block;
+
+  width: fit-content;
+
+  margin-bottom: 9px;
+  padding-bottom: 6px;
+
+  font-family:
+    'Space Grotesk',
+    sans-serif;
+
+  font-size: 30px;
+  font-weight: 700;
+
+  line-height: 1.1;
+
+  color: #ffffff;
 }
 
+
+/* =========================================================
+   GARIS PUTIH DI BAWAH VALUE
+========================================================= */
+
+.about-highlight-card strong::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 0;
+
+  width: 0;
+  height: 2px;
+
+  transform: translateX(-50%);
+
+  border-radius: 999px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 4px rgba(255, 255, 255, 0.8),
+    0 0 8px rgba(255, 255, 255, 0.45);
+
+  transition:
+    width 0.32s cubic-bezier(.22, .61, .36, 1);
+}
+
+
+/* garis putih muncul saat CARD di-hover */
+
+.about-highlight-card:hover strong::after {
+  width: 100%;
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.about-highlight-card p {
+  margin: 0;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  line-height: 1.55;
+
+  color: #aebed0;
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.about-highlight-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(255, 255, 255, 0.18);
+
+  box-shadow:
+    0 24px 50px rgba(7, 26, 47, 0.22);
+}
 
 /* =========================================================
    VISION / MISSION
@@ -2043,6 +2281,102 @@ img {
 }
 
 /* =========================================================
+   FOOTER NEON GREEN UNDERLINE
+========================================================= */
+
+
+/* =========================================================
+   QUICK LINKS + SERVICES TEXT
+========================================================= */
+
+.footer__menu-text,
+.footer__link-text {
+  position: relative;
+
+  display: inline-block;
+
+  width: fit-content;
+
+  padding-bottom: 5px;
+}
+
+
+/* =========================================================
+   NEON LINE
+========================================================= */
+
+.footer__menu-text::after,
+.footer__link-text::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 2px;
+
+  border-radius: 999px;
+
+  background: #5334c7;
+
+  box-shadow:
+    0 0 4px rgba(104, 74, 212, 0.95),
+    0 0 8px rgba(104, 74, 212, 0.75),
+    0 0 14px rgba(104, 74, 212, 0.5);
+
+  transition:
+    width 0.32s cubic-bezier(.22, .61, .36, 1),
+    box-shadow 0.32s ease;
+}
+
+
+/* =========================================================
+   QUICK LINKS + SERVICES HOVER
+========================================================= */
+
+.footer__column
+> button:not(.footer__brand):hover
+.footer__menu-text::after {
+  width: 100%;
+
+  box-shadow:
+    0 0 5px rgba(121, 212, 74, 1),
+    0 0 10px rgba(121, 212, 74, 0.8),
+    0 0 18px rgba(121, 212, 74, 0.55);
+}
+
+
+/* =========================================================
+   CONTACT HOVER
+========================================================= */
+
+.footer__contact a:hover
+.footer__link-text::after,
+.footer__address:hover
+.footer__link-text::after {
+  width: 100%;
+
+  box-shadow:
+    0 0 5px rgba(121, 212, 74, 1),
+    0 0 10px rgba(121, 212, 74, 0.8),
+    0 0 18px rgba(121, 212, 74, 0.55);
+}
+
+
+/* =========================================================
+   TEXT COLOR HOVER
+========================================================= */
+
+.footer__column
+> button:not(.footer__brand):hover,
+.footer__contact a:hover,
+.footer__address:hover {
+  color: #0b3d6e;
+}
+
+/* =========================================================
    RESPONSIVE - TABLET / SMALL DESKTOP
 ========================================================= */
 
@@ -2382,7 +2716,7 @@ img {
 
   color: white;
 
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 400;
 
   line-height: 1;
@@ -2539,7 +2873,7 @@ img {
   }
 
   .floating-contact__icon {
-    font-size: 22px;
+    font-size: 30px;
   }
 
 }
@@ -2562,7 +2896,7 @@ img {
   }
 
   .floating-contact__icon {
-    font-size: 20px;
+    font-size: 23px;
   }
 
 }

@@ -359,37 +359,6 @@ function App() {
         </section>
 
         {/* =====================================================
-            STATS
-        ===================================================== */}
-
-        <section className="stats">
-
-          <div className="container stats__grid">
-
-            {highlights.map(
-              ([number, label]) => (
-
-                <div
-                  className="stat"
-                  key={label}
-                >
-                  <strong>
-                    {number}
-                  </strong>
-
-                  <span>
-                    {label}
-                  </span>
-                </div>
-
-              )
-            )}
-
-          </div>
-
-        </section>
-
-        {/* =====================================================
             ABOUT
         ===================================================== */}
 
@@ -397,6 +366,34 @@ function App() {
           id="about"
           className="section about"
         >
+
+          {/* HIGHLIGHTS */}
+
+          <div className="container about-highlights">
+
+            {highlights.map(([number, label], index) => (
+
+              <article
+                className="about-highlight-card"
+                key={label}
+              >
+
+                <strong>
+                  {number}
+                </strong>
+
+                <p>
+                  {label}
+                </p>
+
+              </article>
+
+            ))}
+
+          </div>
+
+
+          {/* ABOUT CONTENT */}
 
           <div className="container about__grid">
 
@@ -435,13 +432,12 @@ function App() {
 
           </div>
 
+
+          {/* VISION MISSION */}
+
           <div className="container vision-grid">
 
             <article className="vision-card">
-
-              <span>
-                01
-              </span>
 
               <h3>
                 Visi
@@ -457,10 +453,6 @@ function App() {
             </article>
 
             <article className="vision-card vision-card--accent">
-
-              <span>
-                02
-              </span>
 
               <h3>
                 Misi
@@ -592,9 +584,6 @@ function App() {
                     />
 
                     <div className="creative-project-card__overlay">
-                      <span>
-                        {String(projectNumber).padStart(2, '0')}
-                      </span>
 
                       <h3>{item.title}</h3>
                       <p>{item.subtitle}</p>
@@ -759,28 +748,28 @@ function App() {
               Quick Links
             </h3>
 
-            <button
-              onClick={() => go('home')}
-            >
-              Beranda
+            <button onClick={() => go('home')}>
+              <span className="footer__menu-text">
+                Beranda
+              </span>
             </button>
 
-            <button
-              onClick={() => go('about')}
-            >
-              Tentang Kami
+            <button onClick={() => go('about')}>
+              <span className="footer__menu-text">
+                Tentang Kami
+              </span>
             </button>
 
-            <button
-              onClick={() => go('projects')}
-            >
-              Portofolio
+            <button onClick={() => go('projects')}>
+              <span className="footer__menu-text">
+                Portofolio
+              </span>
             </button>
 
-            <button
-              onClick={() => go('clients')}
-            >
-              Mitra & Pelanggan
+            <button onClick={() => go('clients')}>
+              <span className="footer__menu-text">
+                Mitra & Pelanggan
+              </span>
             </button>
 
           </div>
@@ -793,28 +782,28 @@ function App() {
               Layanan
             </h3>
 
-            <button
-              onClick={() => go('services')}
-            >
-              Instrumentasi Industri
+            <button onClick={() => go('services')}>
+              <span className="footer__menu-text">
+                Instrumentasi Industri
+              </span>
             </button>
 
-            <button
-              onClick={() => go('services')}
-            >
-              Electrical & Mechanical
+            <button onClick={() => go('services')}>
+              <span className="footer__menu-text">
+                Electrical & Mechanical
+              </span>
             </button>
 
-            <button
-              onClick={() => go('services')}
-            >
-              SPPBE & LPG Support
+            <button onClick={() => go('services')}>
+              <span className="footer__menu-text">
+                SPPBE & LPG Support
+              </span>
             </button>
 
-            <button
-              onClick={() => go('services')}
-            >
-              Engineering & Maintenance
+            <button onClick={() => go('services')}>
+              <span className="footer__menu-text">
+                Engineering & Maintenance
+              </span>
             </button>
 
           </div>
@@ -836,17 +825,21 @@ function App() {
                 📞
               </span>
 
-              +62 822 1848 5849
+              <span className="footer__link-text">
+                +62 822 1848 5849
+              </span>
             </a>
 
-            <a
-              href="mailto:lazuardi.bkt@gmail.com"
-            >
+            <a href="mailto:lazuardi.bkt@gmail.com">
+
               <span className="footer__emoji-icon">
                 📧
               </span>
 
-              lazuardi.bkt@gmail.com
+              <span className="footer__link-text">
+                lazuardi.bkt@gmail.com
+              </span>
+
             </a>
 
             <p className="footer__address">
@@ -855,9 +848,11 @@ function App() {
                 📍
               </span>
 
-              Jl. Pasir Kumeli,
-              Kota Cimahi,
-              Jawa Barat 40511
+              <span className="footer__link-text">
+                Jl. Pasir Kumeli,
+                Kota Cimahi,
+                Jawa Barat 40511
+              </span>
 
             </p>
 
