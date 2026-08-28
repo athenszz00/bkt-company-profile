@@ -675,9 +675,15 @@ function App() {
           aria-label="Kirim Email"
           title="Kirim Email"
         >
-          <span className="floating-contact__icon">
-            ✉
-          </span>
+            <svg
+            className="floating-contact__email-icon"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              d="M3 5h18v14H3V5zm2 2v.4l7 5.1 7-5.1V7H5zm14 10V9.8l-7 5-7-5V17h14z"
+            />
+          </svg>
         </a>
 
         {/* WHATSAPP */}

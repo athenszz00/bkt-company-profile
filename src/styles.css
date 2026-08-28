@@ -2789,6 +2789,21 @@ img {
     transform 0.25s ease;
 }
 
+/* EMAIL SVG ICON */
+
+.floating-contact__email-icon {
+  display: block;
+
+  width: 30px;
+  height: 30px;
+
+  flex-shrink: 0;
+
+  fill: #ffffff;
+
+  transition:
+    transform 0.25s ease;
+}
 
 /* =========================================================
    EMAIL
@@ -2867,7 +2882,8 @@ img {
 }
 
 
-.floating-contact__button:hover .floating-contact__icon {
+.floating-contact__button:hover .floating-contact__icon,
+.floating-contact__button:hover .floating-contact__email-icon {
   transform: scale(1.08);
 }
 
@@ -2936,8 +2952,9 @@ img {
     height: 50px;
   }
 
-  .floating-contact__icon {
-    font-size: 30px;
+  .floating-contact__email-icon {
+    width: 29px;
+    height: 29px;
   }
 
 }
@@ -2959,9 +2976,10 @@ img {
     height: 47px;
   }
 
-  .floating-contact__icon {
-    font-size: 29px;
-  }
+  .floating-contact__email-icon {
+  width: 28px;
+  height: 28px;
+}
 
 }
 
