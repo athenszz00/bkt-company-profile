@@ -2381,6 +2381,15 @@ img {
 ========================================================= */
 
 @media (max-width: 980px) {
+  .about-highlights {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 50px;
+}
+
+.about-highlight-card {
+  min-width: 0;
+}
   .hero {
     min-height: auto;
   }
@@ -2437,6 +2446,39 @@ img {
 ========================================================= */
 
 @media (max-width: 760px) {
+  .about-highlights {
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-bottom: 42px;
+}
+
+.about-highlight-card {
+  width: 100%;
+  min-width: 0;
+  min-height: 145px;
+
+  padding: 24px 20px;
+
+  border-radius: 18px;
+}
+
+.about-highlight-card strong {
+  max-width: 100%;
+
+  font-size: 28px;
+
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.about-highlight-card p {
+  max-width: 100%;
+
+  font-size: 13px;
+
+  white-space: normal;
+}
+
   .container {
     width: min(100% - 28px, 1180px);
   }
@@ -2576,6 +2618,28 @@ img {
 ========================================================= */
 
 @media (max-width: 420px) {
+  .about-highlights {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 38px;
+  }
+
+  .about-highlight-card {
+    min-height: 135px;
+
+    padding: 22px 18px;
+
+    border-radius: 16px;
+  }
+
+  .about-highlight-card strong {
+    font-size: 25px;
+  }
+
+  .about-highlight-card p {
+    font-size: 12px;
+  }
+
   .hero h1 {
     font-size: 38px;
   }
