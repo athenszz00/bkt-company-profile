@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import './styles.css';
-import logo from './assets/bkt-logo.png';
+import logo from './assets/bktlogo.png';
 import heroImage from './assets/hero-lpg.jpeg';
 import serviceUfm from './assets/service-ufm.jpeg';
 import fabrication from './assets/fabrication.jpeg';
