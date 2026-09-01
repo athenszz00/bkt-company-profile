@@ -380,7 +380,7 @@ img {
 
   margin: 25px 0 30px;
 
-  font-size: 18px;
+  font-size: 16px;
 
   line-height: 1.75;
 
@@ -484,7 +484,7 @@ img {
   position: relative;
 
   width: 140%;
-  max-width: 820px;
+  max-width: 760px;
 
   justify-self: end;
 
@@ -2544,7 +2544,7 @@ img {
   }
 
   .hero__lead {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .hero__actions .btn {
