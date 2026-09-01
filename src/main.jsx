@@ -553,12 +553,11 @@ function App() {
 
             <div className="section-head section-head--dark">
               <h2>
-                Pengalaman nyata di lingkungan operasional.
+                Pengalaman nyata di Lingkungan Industri.
               </h2>
 
               <p>
-                Dokumentasi kegiatan service, fabrication,
-                utility, instalasi dan engineering support.
+                Dokumentasi pekerjaan di Lapangan.
               </p>
             </div>
           </div>
