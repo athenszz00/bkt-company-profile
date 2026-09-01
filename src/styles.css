@@ -349,11 +349,16 @@ img {
 
   max-width: 760px;
 
-  font-size: clamp(44px, 5.3vw, 72px);
+  font-size: clamp(30px, 5.3vw, 62px);
 
   line-height: 1.02;
 
   letter-spacing: -0.045em;
+}
+
+
+.hero__headline span {
+  color: #79d44a;
 }
 
 .hero__company-name {
