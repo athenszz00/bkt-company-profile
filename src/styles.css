@@ -482,6 +482,11 @@ img {
 
 .hero__visual {
   position: relative;
+
+  width: 115%;
+  max-width: 620px;
+
+  justify-self: end;
 }
 
 .hero__frame {
@@ -2413,9 +2418,7 @@ img {
     max-width: 760px;
   }
 
-  .hero__visual {
-    max-width: 680px;
-  }
+  
 
   .hero__frame img {
     aspect-ratio: 16 / 9;
