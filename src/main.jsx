@@ -790,7 +790,7 @@ function App() {
 
             <button onClick={() => go('services')}>
               <span className="footer__menu-text">
-                Instrumentasi Industri
+                Instrumentation Industries
               </span>
             </button>
 

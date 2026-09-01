@@ -348,7 +348,7 @@ img {
   margin: 0;
   max-width: 700px;
 
-  font-size: clamp(44px, 4.5vw, 60px);
+  font-size: clamp(48px, 4.5vw, 60px);
   line-height: 1.05;
   letter-spacing: -0.04em;
 }
@@ -2142,6 +2142,11 @@ img {
 
 }
 
+ .hero__headline {
+    max-width: 100%;
+    font-size: 28px;
+    line-height: 1.15;
+  }
 
 /* =========================================================
    SMALL MOBILE
@@ -2764,7 +2769,11 @@ img {
     max-width: 290px;
   }
 }
-
+ .hero__headline {
+    max-width: 100%;
+    font-size: 28px;
+    line-height: 1.15;
+  }
 /* =========================================================
    VERY SMALL MOBILE
 ========================================================= */
