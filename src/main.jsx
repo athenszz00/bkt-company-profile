@@ -740,8 +740,8 @@ function App() {
 
             <p>
               Engineering partner untuk kebutuhan
-              instrumentasi, electrical, mechanical,
-              maintenance, service dan industrial support.
+              instrument, electrical, mechanical,
+              maintenance, dan service.
             </p>
 
           </div>
