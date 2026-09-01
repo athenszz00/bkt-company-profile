@@ -25,7 +25,7 @@ import pjbLogo from './assets/clients/pjb.png';
 const services = [
   {
     icon: '⚙',
-    title: 'Instrumentasi Industri',
+    title: 'Instrumentation Industries',
     text: 'Service, calibration, installation, commissioning, training, metering, PLC, DCS, fire & gas systems.'
   },
   {
@@ -495,9 +495,8 @@ function App() {
               </h2>
 
               <p>
-                Dari instrumentasi presisi sampai pekerjaan
-                mechanical, maintenance, SPPBE, material
-                dan manpower supply.
+                Dari Instrumentation Industries, Electrical &
+                Mechanical, SPPBE & LPG Support, hingga Engineering & Maintenance.
               </p>
 
             </div>
