@@ -274,8 +274,9 @@ function App() {
 
             <div className="hero__content reveal">
               <h1>
-                <span>CV. Bhatara Kresna Tunggal</span>
+                CV. Bhatara Kresna Tunggal
               </h1>
+              
               <p className="eyebrow">
                 INSTRUMENT • ELECTRICAL • MECHANICAL
               </p>
