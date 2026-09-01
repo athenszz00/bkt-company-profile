@@ -407,7 +407,7 @@ function App() {
 
               <h2>
                 Solusi teknis untuk industri,
-                dari lapangan hingga commissioning.
+                dari servis hingga commissioning.
               </h2>
 
             </div>
@@ -419,7 +419,7 @@ function App() {
                 di bidang instrumentasi, electrical,
                 mechanical engineering dan service.
                 Tim terdiri dari tenaga ahli serta
-                engineering lapangan yang terlatih
+                engineer lapangan yang terlatih
                 dan berpengalaman.
               </p>
 
