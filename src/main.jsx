@@ -281,7 +281,7 @@ function App() {
                 INSTRUMENT - ELECTRICAL ENGINEERING AND SERVICE 
               </p>
 
-              <h1>
+              <h1 className="hero__headline">
                 Engineering partner untuk operasional industri yang{' '}
                 <span>handal.</span>
               </h1>

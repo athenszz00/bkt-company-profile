@@ -344,6 +344,18 @@ img {
   color: #0783c8;
 }
 
+.hero__headline{
+  margin: 0;
+
+  max-width: 760px;
+
+  font-size: clamp(44px, 5.3vw, 72px);
+
+  line-height: 1.02;
+
+  letter-spacing: -0.045em;
+}
+
 .hero__company-name {
   max-width: none !important;
   width: max-content;
@@ -2419,8 +2431,6 @@ img {
   .hero__content {
     max-width: 760px;
   }
-
-  
 
   .hero__frame img {
     aspect-ratio: 16 / 9;
