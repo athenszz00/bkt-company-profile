@@ -278,17 +278,17 @@ function App() {
               </h1>
 
               <p className="eyebrow">
-                INSTRUMENT • ELECTRICAL • MECHANICAL
+                INSTRUMENT - ELECTRICAL ENGINEERING AND SERVICE 
               </p>
 
               <h1>
                 Engineering partner untuk operasional industri yang{' '}
-                <span>andal.</span>
+                <span>handal.</span>
               </h1>
 
               <p className="hero__lead">
                 CV. Bhatara Kresna Tunggal menyediakan solusi
-                Installation, startup and commissioning, shutdown and maintenance, troubleshooting, manpower supply, Engineering and construction, service, material supply dan dukungan SPPBE untuk kebutuhan
+                Installation, Startup and Commissioning, Shutdown and Maintenance, Troubleshooting, Manpower Supply, Engineering and Construction, Service, Material Supply dan dukungan Maintenance SPPBE (LPG) untuk kebutuhan
                 industri.
               </p>
 
