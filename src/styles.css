@@ -344,15 +344,17 @@ img {
   color: #0783c8;
 }
 
-.hero h1.hero__headline {
+.hero__headline {
   margin: 0;
-  max-width: 700px;
-  font-size: 30px;
-  line-height: 1.12;
-  letter-spacing: -0.03em;
+
+  max-width: 650px;
+
+  font-size: 34px;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
 }
 
-.hero h1.hero__headline span {
+.hero__headline span {
   color: #79d44a;
 }
 
@@ -373,14 +375,7 @@ img {
 
 .hero h1 {
   margin: 0;
-
-  max-width: 760px;
-
-  font-size: clamp(44px, 5.3vw, 72px);
-
-  line-height: 1.02;
-
-  letter-spacing: -0.045em;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .hero h1 span {
@@ -500,7 +495,7 @@ img {
 
   justify-self: end;
 
-  transform: translateX(45px);
+  transform: translateX(110px);
 }
 
 .hero__frame {
@@ -2550,7 +2545,7 @@ img {
   }
 
   .hero h1 {
-    font-size: 44px;
+    font-size: 28px;
   }
 
   .hero__lead {
@@ -2666,7 +2661,7 @@ img {
   }
 
   .hero h1 {
-    font-size: 38px;
+    font-size: 28px;
   }
 
   .client-grid {
@@ -2720,7 +2715,7 @@ img {
   }
 
   .hero h1 {
-    font-size: 34px;
+    font-size: 28px;
   }
 
   .hero__lead {
