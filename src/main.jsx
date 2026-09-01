@@ -283,7 +283,8 @@ function App() {
 
               <h1 className="hero__headline">
                 Engineering partner untuk operasional industri yang{' '}
-                <span>handal.</span>
+                <span>handal</span>
+                Sejak Tahun 2016
               </h1>
 
               <p className="hero__lead">
