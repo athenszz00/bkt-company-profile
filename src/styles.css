@@ -344,20 +344,15 @@ img {
   color: #0783c8;
 }
 
-.hero__headline{
+.hero h1.hero__headline {
   margin: 0;
-
-  max-width: 760px;
-
-  font-size: clamp(28px, 3vw, 40px);
-
-  line-height: 1.02;
-
-  letter-spacing: -0.045em;
+  max-width: 700px;
+  font-size: 30px;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
 }
 
-
-.hero__headline span {
+.hero h1.hero__headline span {
   color: #79d44a;
 }
 
