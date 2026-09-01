@@ -354,10 +354,6 @@ img {
   white-space: nowrap;
 }
 
-.hero__company-name span {
-  color: #79d44a;
-}
-
 .hero h1,
 .section h2 {
   font-family: 'Space Grotesk', sans-serif;
