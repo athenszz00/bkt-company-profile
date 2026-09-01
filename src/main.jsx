@@ -416,8 +416,8 @@ function App() {
 
               <p>
                 CV. Bhatara Kresna Tunggal bergerak
-                di bidang instrumentasi, electrical,
-                mechanical engineering dan service.
+                di bidang instrument, electrical,
+                engineering and service.
                 Tim terdiri dari tenaga ahli serta
                 engineer lapangan yang terlatih
                 dan berpengalaman.
@@ -447,8 +447,8 @@ function App() {
 
               <p>
                 Menciptakan produk barang dan jasa di bidang
-                teknologi instrumentasi industri dan teknologi
-                informasi & komunikasi yang handal, efektif,
+                teknologi instrumentasi industri dan elektrikal
+                yang handal, efektif,
                 inovatif dan dinamis.
               </p>
 
