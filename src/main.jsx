@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import './styles.css';
 import logo from './assets/bktlogo.png';
-import heroImage from './assets/hero-lpg.jpeg';
+import heroImage from './assets/hero-hero.jpeg';
 import serviceUfm from './assets/service-ufm.jpeg';
 import fabrication from './assets/fabrication.jpeg';
 import utility from './assets/utility.jpeg';
@@ -273,20 +273,21 @@ function App() {
           <div className="container hero__grid">
 
             <div className="hero__content reveal">
-
+              <h1>
+                <span>CV. Bhatara Kresna Tunggal</span>
+              </h1>
               <p className="eyebrow">
                 INSTRUMENT • ELECTRICAL • MECHANICAL
               </p>
 
               <h1>
-                Engineering partner untuk operasi industri yang{' '}
+                Engineering partner untuk operasional industri yang{' '}
                 <span>andal.</span>
               </h1>
 
               <p className="hero__lead">
                 CV. Bhatara Kresna Tunggal menyediakan solusi
-                engineering, service, maintenance, material
-                supply, dan dukungan SPPBE untuk kebutuhan
+                Installation, startup and commissioning, shutdown and maintenance, troubleshooting, manpower supply, Engineering and construction, service, material supply dan dukungan SPPBE untuk kebutuhan
                 industri.
               </p>
 
@@ -314,7 +315,7 @@ function App() {
               <div className="hero__trust">
 
                 <span>
-                  ✓ Engineering berpengalaman
+                  ✓ Engineer berpengalaman
                 </span>
 
                 <span>
