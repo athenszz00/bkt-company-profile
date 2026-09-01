@@ -490,8 +490,8 @@ img {
 .hero__visual {
   position: relative;
 
-  width: 135%;
-  max-width: 750px;
+  width: 145%;
+  max-width: 800px;
 
   justify-self: end;
 
