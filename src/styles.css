@@ -1530,7 +1530,47 @@ img {
     line-height: 1.5;
   }
 }
+.hero__company-name {
+  width: 100% !important;
+  max-width: 100% !important;
 
+  font-size: 36px !important;
+  line-height: 1.08;
+
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.hero__headline {
+  max-width: 100%;
+  font-size: 28px;
+  line-height: 1.15;
+}
+
+.hero__lead {
+  max-width: 100%;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.hero__visual {
+  width: 100%;
+  max-width: 100%;
+
+  justify-self: stretch;
+
+  transform: none;
+}
+
+.hero__frame {
+  width: 100%;
+}
+
+.hero__frame img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
 
 /* =========================================================
    PROJECTS - SMALL MOBILE
@@ -1576,6 +1616,20 @@ img {
   }
 }
 
+.hero__company-name {
+  font-size: 32px !important;
+  line-height: 1.08;
+}
+
+.hero__headline {
+  font-size: 25px;
+  line-height: 1.16;
+}
+
+.hero__lead {
+  font-size: 13.5px;
+  line-height: 1.7;
+}
 
 /* =========================================================
    PROJECTS - VERY SMALL MOBILE
