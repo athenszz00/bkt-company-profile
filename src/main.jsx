@@ -349,7 +349,7 @@ function App() {
                 </strong>
 
                 <small>
-                  Calibration • Installation • Commissioning
+                  Service • Installation • Commissioning • Training
                 </small>
 
               </div>
