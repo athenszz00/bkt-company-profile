@@ -273,7 +273,7 @@ function App() {
           <div className="container hero__grid">
 
             <div className="hero__content reveal">
-              <h1>
+              <h1 className="hero__company-name">
                 <span>CV. Bhatara Kresna Tunggal</span>
               </h1>
 

@@ -344,6 +344,20 @@ img {
   color: #0783c8;
 }
 
+.hero__company-name {
+  max-width: none !important;
+  width: max-content;
+
+  font-size: clamp(38px, 4.3vw, 62px) !important;
+  line-height: 1.05;
+
+  white-space: nowrap;
+}
+
+.hero__company-name span {
+  color: #79d44a;
+}
+
 .hero h1,
 .section h2 {
   font-family: 'Space Grotesk', sans-serif;
