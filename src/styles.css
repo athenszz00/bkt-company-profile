@@ -346,12 +346,11 @@ img {
 
 .hero__headline {
   margin: 0;
+  max-width: 700px;
 
-  max-width: 650px;
-
-  font-size: 34px;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
+  font-size: clamp(44px, 4.5vw, 60px);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
 }
 
 .hero__headline span {
@@ -1571,6 +1570,12 @@ img {
   aspect-ratio: 16 / 9;
   object-fit: cover;
 }
+.hero__headline {
+  max-width: 100%;
+  font-size: 28px;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
 
 /* =========================================================
    PROJECTS - SMALL MOBILE
@@ -1625,6 +1630,7 @@ img {
   font-size: 25px;
   line-height: 1.16;
 }
+
 
 .hero__lead {
   font-size: 13.5px;
