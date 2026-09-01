@@ -349,7 +349,7 @@ img {
 
   max-width: 760px;
 
-  font-size: clamp(30px, 5.3vw, 62px);
+  font-size: clamp(28px, 3vw, 40px);
 
   line-height: 1.02;
 
