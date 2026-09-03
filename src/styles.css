@@ -1643,6 +1643,419 @@ img {
   pointer-events: none;
 }
 
+/* =========================================================
+   SPPBE PARTNER LINK
+========================================================= */
+
+.sppbe-partner-link {
+  display: grid;
+
+  grid-template-columns: 220px 1fr;
+
+  align-items: center;
+
+  gap: 36px;
+
+  max-width: 900px;
+
+  margin: 55px auto 0;
+  padding: 30px 34px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.12);
+
+  border-radius: 24px;
+
+  text-decoration: none;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.10),
+      rgba(255, 255, 255, 0.045)
+    );
+
+  box-shadow:
+    0 20px 45px
+    rgba(0, 0, 0, 0.15);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.sppbe-partner-link:hover {
+  transform: translateY(-7px);
+
+  border-color:
+    rgba(100, 195, 46, 0.35);
+
+  box-shadow:
+    0 28px 55px
+    rgba(0, 0, 0, 0.22);
+}
+
+.sppbe-partner-link__logo {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 120px;
+
+  padding: 22px;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+}
+
+.sppbe-partner-link__logo img {
+  display: block;
+
+  width: 100%;
+
+  max-width: 170px;
+  max-height: 80px;
+
+  object-fit: contain;
+}
+
+.sppbe-partner-link__content span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 0.16em;
+
+  color: #79d44a;
+}
+
+.sppbe-partner-link__content h3 {
+  margin: 0 0 10px;
+
+  font-family:
+    'Space Grotesk',
+    sans-serif;
+
+  font-size: 27px;
+
+  color: #ffffff;
+}
+
+.sppbe-partner-link__content p {
+  max-width: 520px;
+
+  margin: 0 0 16px;
+
+  font-size: 13px;
+  line-height: 1.7;
+
+  color: #aebed0;
+}
+
+.sppbe-partner-link__content strong {
+  font-size: 12px;
+
+  color: #67d1ff;
+}
+
+/* =========================================================
+   SPPBE PAGE
+========================================================= */
+
+.sppbe-page {
+  min-height: 100vh;
+
+  background: #ffffff;
+}
+
+.sppbe-page__hero {
+  padding: 160px 0 90px;
+
+  color: #ffffff;
+
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(34, 183, 232, 0.14),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #061729,
+      #092845 55%,
+      #07375a
+    );
+}
+
+.sppbe-page__back {
+  margin-bottom: 45px;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  color: #89dfff;
+}
+
+.sppbe-page__hero-content {
+  max-width: 850px;
+}
+
+.sppbe-page__logo {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 210px;
+  height: 105px;
+
+  margin-bottom: 28px;
+
+  padding: 18px;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+}
+
+.sppbe-page__logo img {
+  max-width: 170px;
+  max-height: 70px;
+
+  object-fit: contain;
+}
+
+.sppbe-page__hero h1 {
+  margin: 0;
+
+  font-family:
+    'Space Grotesk',
+    sans-serif;
+
+  font-size:
+    clamp(44px, 5vw, 68px);
+
+  line-height: 1.05;
+
+  letter-spacing: -0.04em;
+}
+
+.sppbe-page__hero h1 span {
+  color: #79d44a;
+}
+
+.sppbe-page__hero-content > p:last-child {
+  max-width: 700px;
+
+  margin-top: 22px;
+
+  line-height: 1.8;
+
+  color: #b8ccdc;
+}
+
+
+/* CONTENT */
+
+.sppbe-page__content {
+  padding: 100px 0;
+}
+
+.sppbe-page__heading {
+  display: grid;
+
+  grid-template-columns:
+    1.1fr 0.9fr;
+
+  gap: 60px;
+
+  align-items: end;
+
+  margin-bottom: 45px;
+}
+
+.sppbe-page__heading h2 {
+  margin: 0;
+
+  font-family:
+    'Space Grotesk',
+    sans-serif;
+
+  font-size:
+    clamp(34px, 4vw, 52px);
+
+  color: var(--navy);
+}
+
+.sppbe-page__heading > p {
+  margin: 0;
+
+  line-height: 1.8;
+
+  color: var(--muted);
+}
+
+
+/* LIST */
+
+.sppbe-list {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 17px;
+}
+
+.sppbe-list__card {
+  position: relative;
+
+  min-height: 155px;
+
+  padding: 24px;
+
+  border:
+    1px solid
+    #e1eaf0;
+
+  border-radius: 19px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 12px 32px
+    rgba(7, 26, 47, 0.06);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.sppbe-list__card:hover {
+  transform: translateY(-5px);
+
+  border-color:
+    rgba(5, 135, 213, 0.25);
+
+  box-shadow:
+    0 20px 42px
+    rgba(7, 26, 47, 0.11);
+}
+
+.sppbe-list__number {
+  display: block;
+
+  margin-bottom: 18px;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+
+  color: #91a3b3;
+}
+
+.sppbe-list__icon {
+  display: grid;
+
+  place-items: center;
+
+  width: 32px;
+  height: 32px;
+
+  margin-bottom: 15px;
+
+  border-radius: 9px;
+
+  font-weight: 800;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0c94da,
+      #64c32e
+    );
+}
+
+.sppbe-list__card h3 {
+  margin: 0;
+
+  font-family:
+    'Space Grotesk',
+    sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.4;
+
+  color: var(--navy);
+}
+
+
+/* CTA */
+
+.sppbe-page__cta {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 40px;
+
+  margin-top: 65px;
+
+  padding: 38px 42px;
+
+  border-radius: 24px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #071a2f,
+      #0b3659
+    );
+}
+
+.sppbe-page__cta span {
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 0.16em;
+
+  color: #67d1ff;
+}
+
+.sppbe-page__cta h2 {
+  max-width: 620px;
+
+  margin: 10px 0 0;
+
+  font-family:
+    'Space Grotesk',
+    sans-serif;
+
+  font-size: 29px;
+}
 
 /* =========================================================
    STAGGER / CREATIVE COMPOSITION
@@ -1957,6 +2370,61 @@ img {
   letter-spacing: -0.025em;
 }
 
+.sppbe-partner-link {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+
+    margin-top: 40px;
+
+    padding: 24px;
+  }
+
+  .sppbe-partner-link__logo {
+    min-height: 100px;
+  }
+
+  .sppbe-partner-link__content h3 {
+    font-size: 23px;
+  }
+
+
+  .sppbe-page__hero {
+    padding: 125px 0 65px;
+  }
+
+  .sppbe-page__hero h1 {
+    font-size: 38px;
+  }
+
+  .sppbe-page__content {
+    padding: 70px 0;
+  }
+
+  .sppbe-page__heading {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .sppbe-list {
+    grid-template-columns: 1fr;
+  }
+
+  .sppbe-page__cta {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding: 30px 25px;
+  }
+
+  .sppbe-page__cta .btn {
+    width: 100%;
+
+    justify-content: center;
+  }
+
 /* =========================================================
    PROJECTS - SMALL MOBILE
 ========================================================= */
@@ -2017,6 +2485,150 @@ img {
   line-height: 1.7;
 }
 
+.sppbe-partner-link {
+    gap: 18px;
+    margin-top: 32px;
+    padding: 20px;
+
+    border-radius: 20px;
+  }
+
+  .sppbe-partner-link__logo {
+    min-height: 90px;
+    padding: 16px;
+  }
+
+  .sppbe-partner-link__logo img {
+    max-width: 145px;
+    max-height: 65px;
+  }
+
+  .sppbe-partner-link__content h3 {
+    font-size: 21px;
+    line-height: 1.2;
+  }
+
+  .sppbe-partner-link__content p {
+    font-size: 12.5px;
+    line-height: 1.65;
+  }
+
+  .sppbe-page__hero {
+    padding: 115px 0 55px;
+  }
+
+  .sppbe-page__back {
+    margin-bottom: 32px;
+    font-size: 12px;
+  }
+
+  .sppbe-page__logo {
+    width: 180px;
+    height: 90px;
+
+    margin-bottom: 22px;
+    padding: 15px;
+
+    border-radius: 15px;
+  }
+
+  .sppbe-page__logo img {
+    max-width: 145px;
+    max-height: 60px;
+  }
+
+  .sppbe-page__hero h1 {
+    font-size: 32px;
+    line-height: 1.08;
+  }
+
+  .sppbe-page__hero-content > p:last-child {
+    margin-top: 18px;
+
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .sppbe-page__content {
+    padding: 58px 0;
+  }
+
+  .sppbe-page__heading {
+    gap: 14px;
+    margin-bottom: 30px;
+  }
+
+  .sppbe-page__heading h2 {
+    font-size: 30px;
+    line-height: 1.1;
+  }
+
+  .sppbe-page__heading > p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .sppbe-list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .sppbe-list__card {
+    min-height: 135px;
+
+    padding: 20px;
+
+    border-radius: 16px;
+  }
+
+  .sppbe-list__number {
+    margin-bottom: 14px;
+    font-size: 9px;
+  }
+
+  .sppbe-list__icon {
+    width: 30px;
+    height: 30px;
+
+    margin-bottom: 13px;
+
+    font-size: 14px;
+  }
+
+  .sppbe-list__card h3 {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .sppbe-page__cta {
+    gap: 22px;
+
+    margin-top: 42px;
+
+    padding: 25px 20px;
+
+    border-radius: 20px;
+  }
+
+  .sppbe-page__cta h2 {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+
+  .sppbe-page__cta span {
+    font-size: 9px;
+  }
+
+  .sppbe-page__cta .btn {
+    width: 100%;
+
+    padding: 13px 16px;
+
+    justify-content: center;
+
+    font-size: 13px;
+  }
+
 /* =========================================================
    PROJECTS - VERY SMALL MOBILE
 ========================================================= */
@@ -2042,6 +2654,162 @@ img {
   }
 }
 
+ .sppbe-partner-link {
+    gap: 16px;
+    margin-top: 28px;
+    padding: 18px;
+
+    border-radius: 18px;
+  }
+
+  .sppbe-partner-link__logo {
+    min-height: 82px;
+    padding: 14px;
+  }
+
+  .sppbe-partner-link__logo img {
+    max-width: 130px;
+    max-height: 56px;
+  }
+
+  .sppbe-partner-link__content span {
+    font-size: 8.5px;
+    letter-spacing: 0.14em;
+  }
+
+  .sppbe-partner-link__content h3 {
+    font-size: 19px;
+    line-height: 1.2;
+  }
+
+  .sppbe-partner-link__content p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .sppbe-partner-link__content strong {
+    font-size: 11px;
+  }
+
+  .sppbe-page__hero {
+    padding: 108px 0 50px;
+  }
+
+  .sppbe-page__back {
+    margin-bottom: 28px;
+    font-size: 11px;
+  }
+
+  .sppbe-page__logo {
+    width: 160px;
+    height: 82px;
+
+    margin-bottom: 20px;
+    padding: 14px;
+
+    border-radius: 14px;
+  }
+
+  .sppbe-page__logo img {
+    max-width: 130px;
+    max-height: 54px;
+  }
+
+  .sppbe-page__hero h1 {
+    font-size: 29px;
+    line-height: 1.08;
+  }
+
+  .sppbe-page__hero-content > p:last-child {
+    margin-top: 16px;
+
+    font-size: 12.5px;
+    line-height: 1.65;
+  }
+
+  .sppbe-page__content {
+    padding: 52px 0;
+  }
+
+  .sppbe-page__heading {
+    gap: 12px;
+    margin-bottom: 26px;
+  }
+
+  .sppbe-page__heading h2 {
+    font-size: 27px;
+    line-height: 1.1;
+  }
+
+  .sppbe-page__heading > p {
+    font-size: 12.5px;
+    line-height: 1.65;
+  }
+
+  .sppbe-list {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .sppbe-list__card {
+    min-height: 125px;
+
+    padding: 18px;
+
+    border-radius: 15px;
+  }
+
+  .sppbe-list__number {
+    margin-bottom: 12px;
+
+    font-size: 8.5px;
+  }
+
+  .sppbe-list__icon {
+    width: 28px;
+    height: 28px;
+
+    margin-bottom: 11px;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+  }
+
+  .sppbe-list__card h3 {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .sppbe-page__cta {
+    gap: 18px;
+
+    margin-top: 36px;
+
+    padding: 22px 18px;
+
+    border-radius: 18px;
+  }
+
+  .sppbe-page__cta span {
+    font-size: 8.5px;
+    letter-spacing: 0.13em;
+  }
+
+  .sppbe-page__cta h2 {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .sppbe-page__cta .btn {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    justify-content: center;
+
+    font-size: 12px;
+  }
 
 /* =========================================================
    CLIENTS

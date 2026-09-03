@@ -154,6 +154,45 @@ const clients = [
   }
 ];
 
+const sppbePartners = [
+  'SPPBE PT. GAS BUMI NUSANTARA JAYA',
+  'SPPBE PT. WIRABANGUN',
+  'SPPBE PT. LIMA GAS JAYA MANDIRI',
+  'SPPBE PT. GASINDO GRAHA UTAMA',
+  'SPPBE PT. BAJUBANG GASINDO',
+  'SPPBE PT. PERMATA ALAM SULAWESI',
+  'SPPBE PT. PATRA TRADING DEPO PERTAMINA',
+  'SPPBE PT. PURNATARUM',
+  'SPPBE PT. RADEKATAMA MITRA',
+  'SPPBE PT. ATHENA',
+  'SPPBE PT. ARTHA JAYA GAS',
+  'SPPBE PT. ASGARAYA',
+  'SPPBE PT. OM AGUS',
+  'SPPBE PT. BINTANG ENERGI ABADI',
+  'SPPBE PT. ERAWAN',
+  'SPPBE PT. ENERGI BIRU PERKASA',
+  'SPPBE PT. BUMINDO',
+  'SPPBE PT. CHUNUR',
+  'SPPBE PT. SADIKUN',
+  'SPPBE PT. INDONESIA BINTANG CEMERLANG',
+  'SPPBE PT. PERNADI WIRAPERKASA',
+  'SPPBE PT. KARYA MUSI MANDIRI',
+  'SPPBE PT. GASKIMA PRIMA KENCANA',
+  'SPPBE PT. GIGAINTRAX',
+  'SPPBE PT. API BIRU NUSANTARA',
+  'SPPBE PT. SINAR MUTIARA INDAH',
+  'SPPBE PT. WINGAS',
+  'SPPBE PT. Asgaraya',
+  'SPPBE PT. Gas Abadi',
+  'SPPBE PT. Jabar Energy',
+  'SPPBE PT. Sinar Wahana Surya',
+  'SPPBE PT. Nanggala',
+  'SPPBE PT. Delta Adiguna',
+  'SPPBE PT. Dharma Kumala Kencana',
+  'SPPBE PT. Pernadi',
+  'SPPBE PT. Cahaya Gas Gemilang',
+];
+
 /* =========================================================
    PROJECT DATA
 ========================================================= */
@@ -197,6 +236,131 @@ const navItems = {
   clients: 'Klien',
   contact: 'Kontak'
 };
+function MitraSppbePage() {
+  const navigate = useNavigate();
+
+  return (
+    <main className="sppbe-page">
+
+      <section className="sppbe-page__hero">
+        <div className="container">
+
+          <button
+            className="sppbe-page__back"
+            onClick={() => navigate('/')}
+          >
+            ← Kembali ke Beranda
+          </button>
+
+          <div className="sppbe-page__hero-content">
+
+            <div className="sppbe-page__logo">
+              <img
+                src={pertaminaPatraNiagaLogo}
+                alt="Pertamina Patra Niaga"
+              />
+            </div>
+
+            <p className="eyebrow">
+              MITRA & PELANGGAN
+            </p>
+
+            <h1>
+              Mitra Pelanggan
+              <span> SPPBE LPG</span>
+            </h1>
+
+            <p>
+              Daftar mitra pelanggan SPPBE LPG
+              CV. Bhatara Kresna Tunggal.
+            </p>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <section className="sppbe-page__content">
+        <div className="container">
+
+          <div className="sppbe-page__heading">
+
+            <div>
+              <p className="eyebrow eyebrow--dark">
+                DAFTAR MITRA
+              </p>
+
+              <h2>
+                Mitra SPPBE LPG
+              </h2>
+            </div>
+
+            <p>
+              Jaringan mitra dan pelanggan yang telah
+              menggunakan dukungan layanan perusahaan.
+            </p>
+
+          </div>
+
+
+          <div className="sppbe-list">
+
+            {sppbePartners.map((partner, index) => (
+
+              <article
+                className="sppbe-list__card"
+                key={`${partner}-${index}`}
+              >
+
+                <span className="sppbe-list__number">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+
+                <div className="sppbe-list__icon">
+                  ✓
+                </div>
+
+                <h3>
+                  {partner}
+                </h3>
+
+              </article>
+
+            ))}
+
+          </div>
+
+
+          <div className="sppbe-page__cta">
+
+            <div>
+              <span>
+                BUTUH INFORMASI LEBIH LANJUT?
+              </span>
+
+              <h2>
+                Hubungi kami untuk kebutuhan layanan SPPBE LPG.
+              </h2>
+            </div>
+
+            <a
+              href="https://wa.me/6282218485849"
+              target="_blank"
+              rel="noreferrer"
+              className="btn btn--primary"
+            >
+              Hubungi via WhatsApp →
+            </a>
+
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+  );
+}
 
 function ServiceDetailPage() {
   const { slug } = useParams();
@@ -852,8 +1016,35 @@ function App() {
           </div>
 
           <div className="container">
-            <div className="client-carousel__bottom">
-            </div>
+            <Link
+              to="/mitra-sppbe-lpg"
+              className="sppbe-partner-link"
+            >
+              <div className="sppbe-partner-link__logo">
+                <img
+                  src={pertaminaPatraNiagaLogo}
+                  alt="Pertamina Patra Niaga"
+                />
+              </div>
+
+              <div className="sppbe-partner-link__content">
+                <span>MITRA KHUSUS SPPBE</span>
+
+                <h3>
+                  Mitra Pelanggan SPPBE LPG
+                </h3>
+
+                <p>
+                  Lihat seluruh mitra pelanggan SPPBE LPG
+                  CV. Bhatara Kresna Tunggal.
+                </p>
+
+                <strong>
+                  Lihat daftar mitra →
+                </strong>
+              </div>
+            </Link>
+
           </div>
         </section>
       </main>
@@ -1113,6 +1304,11 @@ createRoot(
           element={<ServiceDetailPage />}
         />
 
+        <Route
+          path="/mitra-sppbe-lpg"
+          element={<MitraSppbePage />}
+        />
+        
       </Routes>
     </BrowserRouter>
 
