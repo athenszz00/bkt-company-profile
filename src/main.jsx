@@ -245,7 +245,7 @@ function ServiceDetailPage() {
             </div>
 
             <p className="eyebrow">
-              LAYANAN BKT
+              LAYANAN CV. Bhatara Kresna Tunggal
             </p>
 
             <h1>
