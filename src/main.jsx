@@ -15,6 +15,7 @@ import serviceUfm from './assets/service-ufm.jpeg';
 import fabrication from './assets/fabrication.jpeg';
 import utility from './assets/utility.jpeg';
 import project from './assets/project.jpeg';
+import pertaminaPatraNiagaLogo from './assets/clients/pertamina-patra-niaga.jpg';
 import freeportLogo from './assets/clients/freeport.png';
 import pertaminaEpLogo from './assets/clients/pertamina-ep.png';
 import pheLogo from './assets/clients/phe.png';
@@ -1308,7 +1309,7 @@ createRoot(
           path="/mitra-sppbe-lpg"
           element={<MitraSppbePage />}
         />
-        
+
       </Routes>
     </BrowserRouter>
 
