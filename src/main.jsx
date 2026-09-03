@@ -36,7 +36,7 @@ const services = [
     slug: 'instrumentation-industries',
     icon: '⚙',
     title: 'Instrumentation Industries',
-    text: 'Service, calibration, installation, commissioning, training, metering, PLC, DCS, fire & gas systems.',
+    text: 'Service, Calibration, Installation, Commissioning, Training, Metering, PLC, DCS, Fire & Gas Systems.',
     scope: [
       'Service',
       'Calibration',
@@ -54,7 +54,7 @@ const services = [
     slug: 'electrical-mechanical',
     icon: 'ϟ',
     title: 'Electrical & Mechanical',
-    text: 'Fabrication, generator, pump, compressor, boiler, hydrant system, piping & tubing, serta material supply.',
+    text: 'Fabrication, Generator, Pump, Compressor, Boiler, Hydrant System, Piping & Tubing, serta Material Supply.',
     scope: [
       'Fabrication',
       'Generator',
@@ -71,7 +71,7 @@ const services = [
     slug: 'sppbe-lpg-support',
     icon: '◈',
     title: 'SPPBE & LPG Support',
-    text: 'Layanan servis, pembangunan fasilitas SPPBE, sparepart UFM, evacuation pump, loading hose, dan utility device.',
+    text: 'Layanan Service, Pembangunan Fasilitas SPPBE, Sparepart UFM, Evacuation Pump, Loading Hose, dan Utility Device.',
     scope: [
       'Layanan Service',
       'Pembangunan Fasilitas SPPBE',
@@ -86,7 +86,7 @@ const services = [
     slug: 'engineering-maintenance',
     icon: '✓',
     title: 'Engineering & Maintenance',
-    text: 'Startup & commissioning, shutdown & maintenance, troubleshooting, manpower supply, dan engineering construction.',
+    text: 'Startup & Commissioning, Shutdown & Maintenance, Troubleshooting, Manpower Supply, dan Engineering Construction.',
     scope: [
       'Startup & Commissioning',
       'Shutdown & Maintenance',
