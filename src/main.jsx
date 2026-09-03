@@ -1,5 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link,
+  useParams,
+  useNavigate,
+} from 'react-router-dom';
 import './styles.css';
 import logo from './assets/bktlogo.png';
 import heroImage from './assets/hero-hero.jpeg';
@@ -24,25 +32,68 @@ import pjbLogo from './assets/clients/pjb.png';
 
 const services = [
   {
+    slug: 'instrumentation-industries',
     icon: '⚙',
     title: 'Instrumentation Industries',
-    text: 'Service, calibration, installation, commissioning, training, metering, PLC, DCS, fire & gas systems.'
+    text: 'Service, calibration, installation, commissioning, training, metering, PLC, DCS, fire & gas systems.',
+    scope: [
+      'Service',
+      'Calibration',
+      'Installation',
+      'Commissioning',
+      'Training',
+      'Metering',
+      'PLC',
+      'DCS',
+      'Fire & Gas Systems',
+    ],
   },
+
   {
+    slug: 'electrical-mechanical',
     icon: 'ϟ',
     title: 'Electrical & Mechanical',
-    text: 'Fabrication, generator, pump, compressor, boiler, hydrant system, piping & tubing, serta material supply.'
+    text: 'Fabrication, generator, pump, compressor, boiler, hydrant system, piping & tubing, serta material supply.',
+    scope: [
+      'Fabrication',
+      'Generator',
+      'Pump',
+      'Compressor',
+      'Boiler',
+      'Hydrant System',
+      'Piping & Tubing',
+      'Material Supply',
+    ],
   },
+
   {
+    slug: 'sppbe-lpg-support',
     icon: '◈',
     title: 'SPPBE & LPG Support',
-    text: 'Layanan servis, pembangunan fasilitas SPPBE, sparepart UFM, evacuation pump, loading hose, dan utility device.'
+    text: 'Layanan servis, pembangunan fasilitas SPPBE, sparepart UFM, evacuation pump, loading hose, dan utility device.',
+    scope: [
+      'Layanan Service',
+      'Pembangunan Fasilitas SPPBE',
+      'Sparepart UFM',
+      'Evacuation Pump',
+      'Loading Hose',
+      'Utility Device',
+    ],
   },
+
   {
+    slug: 'engineering-maintenance',
     icon: '✓',
     title: 'Engineering & Maintenance',
-    text: 'Startup & commissioning, shutdown & maintenance, troubleshooting, manpower supply, dan engineering construction.'
-  }
+    text: 'Startup & commissioning, shutdown & maintenance, troubleshooting, manpower supply, dan engineering construction.',
+    scope: [
+      'Startup & Commissioning',
+      'Shutdown & Maintenance',
+      'Troubleshooting',
+      'Manpower Supply',
+      'Engineering Construction',
+    ],
+  },
 ];
 
 /* =========================================================
@@ -146,6 +197,151 @@ const navItems = {
   clients: 'Klien',
   contact: 'Kontak'
 };
+
+function ServiceDetailPage() {
+  const { slug } = useParams();
+  const navigate = useNavigate();
+
+  const service = services.find(
+    (item) => item.slug === slug
+  );
+
+  if (!service) {
+    return (
+      <main className="service-detail">
+        <div className="container">
+          <div className="service-detail__not-found">
+            <h1>Layanan tidak ditemukan.</h1>
+
+            <button
+              className="btn btn--primary"
+              onClick={() => navigate('/')}
+            >
+              Kembali ke Beranda
+            </button>
+          </div>
+        </div>
+      </main>
+    );
+  }
+
+  return (
+    <main className="service-detail">
+
+      <section className="service-detail__hero">
+        <div className="container">
+
+          <button
+            className="service-detail__back"
+            onClick={() => navigate('/')}
+          >
+            ← Kembali ke Beranda
+          </button>
+
+          <div className="service-detail__heading">
+
+            <div className="service-detail__icon">
+              {service.icon}
+            </div>
+
+            <p className="eyebrow">
+              LAYANAN BKT
+            </p>
+
+            <h1>
+              {service.title}
+            </h1>
+
+            <p className="service-detail__description">
+              {service.text}
+            </p>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <section className="service-detail__content">
+        <div className="container">
+
+          <div className="service-detail__intro">
+
+            <div>
+              <p className="eyebrow eyebrow--dark">
+                SCOPE OF WORK
+              </p>
+
+              <h2>
+                Ruang lingkup layanan
+              </h2>
+            </div>
+
+            <p>
+              Dukungan profesional CV. Bhatara Kresna Tunggal
+              untuk kebutuhan operasional dan engineering
+              industri.
+            </p>
+
+          </div>
+
+
+          <div className="service-scope-grid">
+
+            {service.scope.map((item, index) => (
+
+              <article
+                className="service-scope-card"
+                key={item}
+              >
+                <span className="service-scope-card__number">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+
+                <div className="service-scope-card__check">
+                  ✓
+                </div>
+
+                <h3>
+                  {item}
+                </h3>
+
+              </article>
+
+            ))}
+
+          </div>
+
+
+          <div className="service-detail__cta">
+
+            <div>
+              <span>
+                BUTUH INFORMASI LEBIH LANJUT?
+              </span>
+
+              <h2>
+                Diskusikan kebutuhan proyek Anda bersama kami.
+              </h2>
+            </div>
+
+            <a
+              href="https://wa.me/6282218485849"
+              target="_blank"
+              rel="noreferrer"
+              className="btn btn--primary"
+            >
+              Hubungi via WhatsApp →
+            </a>
+
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+  );
+}
 
 /* =========================================================
    APP
@@ -506,7 +702,8 @@ function App() {
 
               {services.map((service) => (
 
-                <article
+                <Link
+                  to={`/layanan/${service.slug}`}
                   className="service-card"
                   key={service.title}
                 >
@@ -515,21 +712,19 @@ function App() {
                     {service.icon}
                   </div>
 
-
                   <h3>
                     {service.title}
                   </h3>
-
 
                   <p>
                     {service.text}
                   </p>
 
                   <span className="card-link">
-                    Professional engineering support →
+                    Lihat detail layanan →
                   </span>
 
-                </article>
+                </Link>
 
               ))}
 
@@ -904,6 +1099,22 @@ createRoot(
   document.getElementById('root')
 ).render(
   <React.StrictMode>
-    <App />
+
+    <BrowserRouter>
+      <Routes>
+
+        <Route
+          path="/"
+          element={<App />}
+        />
+
+        <Route
+          path="/layanan/:slug"
+          element={<ServiceDetailPage />}
+        />
+
+      </Routes>
+    </BrowserRouter>
+
   </React.StrictMode>
 );
