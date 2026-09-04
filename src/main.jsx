@@ -293,9 +293,7 @@ const clients = [
   {
     name: 'PT. Triguna',
     logo: trigunaLogo
-  },
-  
-  
+  }
 ];
 
 const sppbePartners = [
