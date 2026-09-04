@@ -7,6 +7,7 @@ import {
   Link,
   useParams,
   useNavigate,
+  useLocation,
 } from 'react-router-dom';
 import './styles.css';
 import logo from './assets/bktlogo.png';
@@ -751,118 +752,9 @@ function ServiceDetailPage() {
   );
 }
 
-/* =========================================================
-   APP
-========================================================= */
-
-function App() {
-  const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  /* =======================================================
-     NAVBAR SCROLL
-  ======================================================= */
-
-  useEffect(() => {
-    const onScroll = () => {
-      setScrolled(window.scrollY > 24);
-    };
-
-    onScroll();
-
-    window.addEventListener(
-      'scroll',
-      onScroll,
-      { passive: true }
-    );
-
-    return () => {
-      window.removeEventListener(
-        'scroll',
-        onScroll
-      );
-    };
-  }, []);
-
-  /* =======================================================
-     SCROLL NAVIGATION
-  ======================================================= */
-
-  const go = (id) => {
-    setOpen(false);
-
-    document
-      .getElementById(id)
-      ?.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-  };
-
+function HomePage({ go }) {
   return (
-    <>
-
-      {/* =====================================================
-          NAVBAR
-      ===================================================== */}
-
-      <header
-        className={`nav ${
-          scrolled ? 'nav--scrolled' : ''
-        }`}
-      >
-        <div className="container nav__inner">
-
-          <button
-            className="brand"
-            onClick={() => go('home')}
-            aria-label="Ke beranda"
-          >
-            <img
-              src={logo}
-              alt="CV. Bhatara Kresna Tunggal"
-            />
-          </button>
-
-          <nav
-            className={`nav__links ${
-              open ? 'is-open' : ''
-            }`}
-            aria-label="Navigasi utama"
-          >
-            {Object.entries(navItems).map(
-              ([id, label]) => (
-                <button
-                  key={id}
-                  onClick={() => go(id)}
-                >
-                  {label}
-                </button>
-              )
-            )}
-          </nav>
-
-          <button
-            className="menu"
-            onClick={() =>
-              setOpen((value) => !value)
-            }
-            aria-label={
-              open
-                ? 'Tutup menu'
-                : 'Buka menu'
-            }
-            aria-expanded={open}
-          >
-            <span />
-            <span />
-            <span />
-          </button>
-
-        </div>
-      </header>
-
-      <main>
+    <main>
 
         {/* =====================================================
             HERO
@@ -1292,6 +1184,179 @@ function App() {
           </div>
         </section>
       </main>
+  );
+}
+    
+
+/* =========================================================
+   APP
+========================================================= */
+
+function App() {
+  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
+    useEffect(() => {
+    if (!location.hash) {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'auto'
+      });
+    }
+  }, [location.pathname, location.hash]);
+
+  /* =======================================================
+     NAVBAR SCROLL
+  ======================================================= */
+
+  useEffect(() => {
+    const onScroll = () => {
+      setScrolled(window.scrollY > 24);
+    };
+
+    onScroll();
+
+    window.addEventListener(
+      'scroll',
+      onScroll,
+      { passive: true }
+    );
+
+    return () => {
+      window.removeEventListener(
+        'scroll',
+        onScroll
+      );
+    };
+  }, []);
+
+      /* =======================================================
+        SCROLL NAVIGATION
+      ======================================================= */
+
+        const go = (id) => {
+        setOpen(false);
+
+        // BERANDA / KEMBALI KE ATAS
+        if (id === 'home') {
+          if (location.pathname !== '/') {
+            navigate('/');
+            return;
+          }
+
+          window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+          });
+
+          return;
+        }
+
+        // JIKA SEDANG DI HALAMAN DETAIL
+        if (location.pathname !== '/') {
+          navigate(`/#${id}`);
+          return;
+        }
+
+        // JIKA SUDAH DI HOMEPAGE
+        document
+          .getElementById(id)
+          ?.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+      };
+  return (
+        <>
+
+      {/* =====================================================
+          NAVBAR
+      ===================================================== */}
+
+      <header
+        className={`nav ${
+          scrolled ? 'nav--scrolled' : ''
+        }`}
+      >
+        <div className="container nav__inner">
+
+          {/* LOGO */}
+          <button
+            className="brand"
+            onClick={() => go('home')}
+            aria-label="Ke beranda"
+          >
+            <img
+              src={logo}
+              alt="CV. Bhatara Kresna Tunggal"
+            />
+          </button>
+
+
+          {/* NAVIGATION */}
+          <nav
+            className={`nav__links ${
+              open ? 'is-open' : ''
+            }`}
+            aria-label="Navigasi utama"
+          >
+            {Object.entries(navItems).map(
+              ([id, label]) => (
+                <button
+                  key={id}
+                  onClick={() => go(id)}
+                >
+                  {label}
+                </button>
+              )
+            )}
+          </nav>
+
+
+          {/* MOBILE MENU */}
+          <button
+            className="menu"
+            onClick={() =>
+              setOpen((value) => !value)
+            }
+            aria-label={
+              open
+                ? 'Tutup menu'
+                : 'Buka menu'
+            }
+            aria-expanded={open}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+
+        </div>
+      </header>
+
+      <Routes>
+
+        <Route
+          path="/"
+          element={<HomePage go={go} />}
+        />
+
+        <Route
+          path="/layanan/:slug"
+          element={<ServiceDetailPage />}
+        />
+
+        <Route
+          path="/mitra-sppbe-lpg"
+          element={<MitraSppbePage />}
+        />
+
+      </Routes>
 
       {/* =====================================================
           FLOATING CONTACT BUTTONS
@@ -1521,8 +1586,7 @@ function App() {
         </div>
 
       </footer>
-
-    </>
+    </> 
   );
 }
 
@@ -1532,29 +1596,12 @@ function App() {
 
 createRoot(
   document.getElementById('root')
-).render(
-  <React.StrictMode>
+    ).render(
+      <React.StrictMode>
 
-    <BrowserRouter>
-      <Routes>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
 
-        <Route
-          path="/"
-          element={<App />}
-        />
-
-        <Route
-          path="/layanan/:slug"
-          element={<ServiceDetailPage />}
-        />
-
-        <Route
-          path="/mitra-sppbe-lpg"
-          element={<MitraSppbePage />}
-        />
-
-      </Routes>
-    </BrowserRouter>
-
-  </React.StrictMode>
-);
+      </React.StrictMode>
+    );
