@@ -193,7 +193,109 @@ const clients = [
   {
     name: 'PT. PJB Muara Karang',
     logo: pjbLogo
-  }
+  },
+  {
+    name: 'PT. Bina Guna',
+    logo: binagunaLogo
+  },
+  {
+    name: 'PT. BP Tangguh',
+    logo: bptangguhLogo
+  },
+  {
+    name: 'PT. Control Systems',
+    logo: controlsystemsLogo
+  },
+  {
+    name: 'PT. Donggi Senoro',
+    logo: donggisenoroLogo
+  },
+  {
+    name: 'PT. Endress Hauser',
+    logo: endresshauserLogo
+  },
+  {
+    name: 'PT. Gineka Karya Teknologi',
+    logo: gktLogo
+  },
+  {
+    name: 'PT. Guna Era Manufaktura',
+    logo: gunaeramanufakturaLogo
+  },
+  {
+    name: 'PT. Imeco Inter Sarana',
+    logo: imecointersaranaLogo
+  },
+  {
+    name: 'PT. Indokomas',
+    logo: indokomasLogo
+  },
+  {
+    name: 'PT. Ipmomi Paiton',
+    logo: ipmomipaitonLogo
+  },
+  {
+    name: 'CV. Ismaya',
+    logo: ismayaLogo
+  },
+  {
+    name: 'PT. Istana Karang Laut',
+    logo: istanakaranglautLogo
+  },
+  {
+    name: 'PT. Kaltim Nitrat Indonesia',
+    logo: kniLogo
+  },
+  {
+    name: 'PT. Kokusai Keiso',
+    logo: kokusaikeisoLogo
+  },
+  {
+    name: 'PT. Kalimantan Prima Indonesia',
+    logo: kppLogo
+  },
+  {
+    name: 'PT. Pertamina Talisman',
+    logo: pertamninatalismanLogo
+  },
+  {
+    name: 'PT. Pertamina WMO',
+    logo: pertaminawmoLogo
+  },
+  {
+    name: 'PT. Panca Global Solusindo',
+    logo: pgsLogo
+  },
+  {
+    name: 'PT. Pembangkit Gorontalo',
+    logo: pltgorontaloLogo
+  },
+  {
+    name: 'PT. Ragam Teknik',
+    logo: ragamteknikLogo
+  },
+  {
+    name: 'PT. Sasana Engineering',
+    logo: sasanaengineeringLogo
+  },
+  {
+    name: 'PT. Sumber Kencana Patria',
+    logo: skpLogo
+  },
+  {
+    name: 'PT. Scada Prima Cipta',
+    logo: spcLogo
+  },
+  {
+    name: 'PT. Tracon Industri',
+    logo: traconLogo
+  },
+  {
+    name: 'PT. Triguna',
+    logo: trigunaLogo
+  },
+  
+  
 ];
 
 const sppbePartners = [
