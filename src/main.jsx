@@ -15,6 +15,18 @@ import serviceUfm from './assets/service-ufm.jpeg';
 import fabrication from './assets/fabrication.jpeg';
 import utility from './assets/utility.jpeg';
 import project from './assets/project.jpeg';
+import sun from './assets/sun.jpg';
+import ssus from './assets/ssus.jpg';
+import ssukc from './assets/ssukc.jpg';
+import ssup from './assets/ssup.jpg';
+import ssue from './assets/ssue.jpg';
+import ssud from './assets/ssud.jpg';
+import sici from './assets/sici.jpg';
+import sctb from './assets/sctb.jpg';
+import occv from './assets/occv.jpg';
+import rtts from './assets/rtts.jpg';
+import ctsi from './assets/ctsi.jpg';
+
 import pertaminaPatraNiagaLogo from './assets/clients/pertamina-patra-niaga.jpg';
 import freeportLogo from './assets/clients/freeport.png';
 import pertaminaEpLogo from './assets/clients/pertamina-ep.png';
@@ -222,7 +234,52 @@ const projectItems = [
     alt: 'Utility device SPPBE',
     title: 'SPPBE Utility',
     subtitle: 'Equipment & facility support'
+  },
+  {
+    image: sun,
+    title: 'Service UFM Ninnelt',
+  },
+  {
+    image: ssus,
+    title: 'Service and Supply UFM Siraga',
+  },
+  {
+    image: ssup,
+    title: 'Supply SPPBE Utility Part',
+  },
+  {
+    image: ssukc,
+    title: 'Service and Supply Kosan Crisplant',
+  },
+  {
+    image: ssue,
+    title: 'Service and Supply UFM Elixir',
+  },
+  {
+    image: ssud,
+    title: 'Service and Supply UFM Daesung',
+  },
+  {
+    image: sici,
+    title: 'Service, Installation, Callibration Instrument',
+  },
+  {
+    image: sctb,
+    title: 'Supply Callibration Test Branch',
+  },
+  {
+    image: occv,
+    title: 'Overhoule Callibration Control Valve',
+  },
+  {
+    image: rtts,
+    title: 'Repair Tanker Trottle System',
+  },
+  {
+    image: ctsi,
+    title: 'Callibration Turbine Supervisory Instrument',
   }
+
 ];
 
 /* =========================================================
