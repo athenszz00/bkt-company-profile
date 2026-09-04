@@ -2220,7 +2220,7 @@ img {
   }
 
   .creative-projects__track {
-    animation-duration: 100s;
+    animation-duration: 150s;
   }
 
   .creative-project-card {
@@ -2265,7 +2265,7 @@ img {
 
   .creative-projects__track {
     padding-left: 14px;
-    animation-duration: 100s;
+    animation-duration: 150s;
   }
 
   .creative-project-card,
@@ -2438,7 +2438,7 @@ img {
 
   .creative-projects__track {
     padding-left: 12px;
-    animation-duration: 100s;
+    animation-duration: 150s;
   }
 
   .creative-project-card,
