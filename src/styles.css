@@ -3210,7 +3210,7 @@ img {
   }
 
   .client-carousel__track {
-    animation-duration: 100s;
+    animation-duration: 50s;
   }
 
   .client-card {
@@ -3244,7 +3244,7 @@ img {
 
 
   .client-carousel__track {
-    animation-duration: 100s;
+    animation-duration: 50s;
   }
 
 
@@ -3303,7 +3303,7 @@ img {
 @media (max-width: 420px) {
 
   .client-carousel__track {
-    animation-duration: 100s;
+    animation-duration: 50s;
   }
 
 
