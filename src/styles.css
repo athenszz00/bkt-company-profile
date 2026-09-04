@@ -2220,7 +2220,7 @@ img {
   }
 
   .creative-projects__track {
-    animation-duration: 25s;
+    animation-duration: 100s;
   }
 
   .creative-project-card {
@@ -2265,7 +2265,7 @@ img {
 
   .creative-projects__track {
     padding-left: 14px;
-    animation-duration: 23s;
+    animation-duration: 100s;
   }
 
   .creative-project-card,
@@ -2438,7 +2438,7 @@ img {
 
   .creative-projects__track {
     padding-left: 12px;
-    animation-duration: 21s;
+    animation-duration: 100s;
   }
 
   .creative-project-card,
@@ -2891,7 +2891,7 @@ img {
   */
   animation:
     clientMoveRight
-    30s linear
+    40s linear
     infinite;
 }
 
@@ -3210,7 +3210,7 @@ img {
   }
 
   .client-carousel__track {
-    animation-duration: 27s;
+    animation-duration: 100s;
   }
 
   .client-card {
@@ -3244,7 +3244,7 @@ img {
 
 
   .client-carousel__track {
-    animation-duration: 24s;
+    animation-duration: 100s;
   }
 
 
@@ -3303,7 +3303,7 @@ img {
 @media (max-width: 420px) {
 
   .client-carousel__track {
-    animation-duration: 22s;
+    animation-duration: 100s;
   }
 
 
