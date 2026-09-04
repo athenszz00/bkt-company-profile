@@ -1282,19 +1282,12 @@ function App() {
     navigate
   ]);
 
-
   /* =======================================================
-     SCROLL NAVIGATION
-  ======================================================= */
+      SCROLL NAVIGATION
+    ======================================================= */
 
   const go = (id) => {
     setOpen(false);
-
-
-    /* ==========================================
-       KONTAK
-       Footer tersedia di SEMUA halaman
-    ========================================== */
 
     if (id === 'contact') {
       const contactSection =
@@ -1347,7 +1340,6 @@ function App() {
       return;
     }
 
-
     /* ==========================================
        TENTANG / LAYANAN / PROYEK / KLIEN
     ========================================== */
@@ -1369,7 +1361,6 @@ function App() {
       return;
     }
 
-
     /* ==========================================
        JIKA SUDAH DI HOMEPAGE
     ========================================== */
@@ -1384,11 +1375,6 @@ function App() {
       });
     }
   };
-
-
-  /* =======================================================
-     RENDER
-  ======================================================= */
 
   return (
     <>
@@ -1438,7 +1424,6 @@ function App() {
             )}
           </nav>
 
-
           {/* MOBILE MENU */}
 
           <button
@@ -1461,7 +1446,6 @@ function App() {
         </div>
       </header>
 
-
       {/* =====================================================
           ROUTES
       ===================================================== */}
@@ -1477,28 +1461,12 @@ function App() {
           }
         />
 
-
-        {/* ================================================
-            SEMUA CARD LAYANAN
-
-            Berlaku untuk:
-
-            /layanan/instrumentation-industries
-
-            /layanan/electrical-mechanical
-
-            /layanan/sppbe-lpg-support
-
-            /layanan/engineering-maintenance
-        ================================================= */}
-
         <Route
           path="/layanan/:slug"
           element={
             <ServiceDetailPage />
           }
         />
-
 
         {/* ================================================
             HALAMAN MITRA SPPBE LPG
