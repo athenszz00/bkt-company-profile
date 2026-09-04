@@ -52,6 +52,21 @@ import medcoLogo from './assets/clients/medco.png';
 import cikarangLogo from './assets/clients/cikarang-listrindo.png';
 import tripatraLogo from './assets/clients/tripatra.png';
 import pjbLogo from './assets/clients/pjb.png';
+import binaguna from './assets/clients/binaguna.png';
+import bptangguh from './assets/clients/bptangguh.png';
+import controlsystems from './assets/clients/controlsystems.png';
+import donggisenoro from './assets/clients/donggisenoro.png';
+import endresshauser from './assets/clients/endresshauser.png';
+import gkt from './assets/clients/gkt.jpg';
+import gunaeramanufaktura from './assets/clients/gunaeramanufaktura.jpg';
+import imecointersarana from './assets/clients/imecointersarana.jpg';
+import indokomas from './assets/clients/indokomas.png';
+import ipmomipaiton from './assets/clients/ipmomipaiton.png';
+import ismaya from './assets/clients/ismaya.jpg';
+import istanakaranglaut from './assets/clients/istanakaranglaut.jpg';
+import kni from './assets/clients/kni.jpg';
+import kokusaikeiso from './assets/clients/kokusaikeiso.png';
+import kpp from './assets/clients/kpp.png';
 
 /* =========================================================
    SERVICES DATA
