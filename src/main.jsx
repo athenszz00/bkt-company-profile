@@ -67,6 +67,16 @@ import istanakaranglautLogo from './assets/clients/istanakaranglaut.jpg';
 import kniLogo from './assets/clients/kni.jpg';
 import kokusaikeisoLogo from './assets/clients/kokusaikeiso.png';
 import kppLogo from './assets/clients/kpp.png';
+import pertaminatalismanLogo from './assets/clients/pertaminatalisman.jpg';
+import pertaminawmoLogo from './assets/clients/pertaminawmo.jpg';
+import pgsLogo from './assets/clients/pgs.jpg';
+import pltggorontaloLogo from './assets/clients/pltggorontalo.jpg';
+import ragamteknikLogo from './assets/clients/ragamteknik.png';
+import sasanaengineeringLogo from './assets/clients/sasanaengineering.png';
+import skpLogo from './assets/clients/skp.png';
+import spcLogo from './assets/clients/spc.jpg';
+import traconLogo from './assets/clients/tracon.png';
+import trigunaLogo from './assets/clients/triguna.png';
 
 /* =========================================================
    SERVICES DATA
@@ -256,7 +266,7 @@ const clients = [
   },
   {
     name: 'PT. Pertamina Talisman',
-    logo: pertamninatalismanLogo
+    logo: pertaminatalismanLogo
   },
   {
     name: 'PT. Pertamina WMO',
@@ -268,7 +278,7 @@ const clients = [
   },
   {
     name: 'PT. Pembangkit Gorontalo',
-    logo: pltgorontaloLogo
+    logo: pltggorontaloLogo
   },
   {
     name: 'PT. Ragam Teknik',
