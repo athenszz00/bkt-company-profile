@@ -1199,15 +1199,6 @@ function App() {
   const navigate = useNavigate();
   const location = useLocation();
 
-    useEffect(() => {
-    if (!location.hash) {
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'auto'
-      });
-    }
-  }, [location.pathname, location.hash]);
 
   /* =======================================================
      NAVBAR SCROLL
@@ -1234,45 +1225,173 @@ function App() {
     };
   }, []);
 
-      /* =======================================================
-        SCROLL NAVIGATION
-      ======================================================= */
 
-        const go = (id) => {
-        setOpen(false);
+  /* =======================================================
+     SCROLL TO TOP SAAT MASUK HALAMAN DETAIL
+  ======================================================= */
 
-        // BERANDA / KEMBALI KE ATAS
-        if (id === 'home') {
-          if (location.pathname !== '/') {
-            navigate('/');
-            return;
-          }
+  useEffect(() => {
+    if (location.pathname !== '/') {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'auto'
+      });
+    }
+  }, [location.pathname]);
 
-          window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: 'smooth'
-          });
 
-          return;
-        }
+  /* =======================================================
+     SCROLL KE SECTION SETELAH KEMBALI KE HOMEPAGE
+  ======================================================= */
 
-        // JIKA SEDANG DI HALAMAN DETAIL
-        if (location.pathname !== '/') {
-          navigate(`/#${id}`);
-          return;
-        }
+  useEffect(() => {
+    if (
+      location.pathname === '/' &&
+      location.state?.scrollTo
+    ) {
+      const sectionId =
+        location.state.scrollTo;
 
-        // JIKA SUDAH DI HOMEPAGE
-        document
-          .getElementById(id)
-          ?.scrollIntoView({
+      const timer = setTimeout(() => {
+        const target =
+          document.getElementById(sectionId);
+
+        if (target) {
+          target.scrollIntoView({
             behavior: 'smooth',
             block: 'start'
           });
-      };
+        }
+
+        /*
+          Bersihkan state supaya tidak scroll ulang
+          ketika refresh / render berikutnya
+        */
+        navigate('/', {
+          replace: true,
+          state: null
+        });
+      }, 100);
+
+      return () => clearTimeout(timer);
+    }
+  }, [
+    location.pathname,
+    location.state,
+    navigate
+  ]);
+
+
+  /* =======================================================
+     SCROLL NAVIGATION
+  ======================================================= */
+
+  const go = (id) => {
+    setOpen(false);
+
+
+    /* ==========================================
+       KONTAK
+       Footer tersedia di SEMUA halaman
+    ========================================== */
+
+    if (id === 'contact') {
+      const contactSection =
+        document.getElementById('contact');
+
+      if (contactSection) {
+        contactSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+
+      return;
+    }
+
+
+    /* ==========================================
+       BERANDA
+    ========================================== */
+
+    if (id === 'home') {
+
+      // Dari halaman detail → homepage
+      if (location.pathname !== '/') {
+        navigate('/');
+
+        /*
+          Setelah route berubah ke homepage,
+          scroll paling atas
+        */
+        setTimeout(() => {
+          window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'auto'
+          });
+        }, 50);
+
+        return;
+      }
+
+
+      // Kalau sudah di homepage
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
+
+      return;
+    }
+
+
+    /* ==========================================
+       TENTANG / LAYANAN / PROYEK / KLIEN
+    ========================================== */
+
+    if (location.pathname !== '/') {
+
+      /*
+        Dari SEMUA halaman detail:
+        kembali ke homepage lalu scroll
+        ke section yang dipilih.
+      */
+
+      navigate('/', {
+        state: {
+          scrollTo: id
+        }
+      });
+
+      return;
+    }
+
+
+    /* ==========================================
+       JIKA SUDAH DI HOMEPAGE
+    ========================================== */
+
+    const targetSection =
+      document.getElementById(id);
+
+    if (targetSection) {
+      targetSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
+
+  /* =======================================================
+     RENDER
+  ======================================================= */
+
   return (
-        <>
+    <>
 
       {/* =====================================================
           NAVBAR
@@ -1286,6 +1405,7 @@ function App() {
         <div className="container nav__inner">
 
           {/* LOGO */}
+
           <button
             className="brand"
             onClick={() => go('home')}
@@ -1299,6 +1419,7 @@ function App() {
 
 
           {/* NAVIGATION */}
+
           <nav
             className={`nav__links ${
               open ? 'is-open' : ''
@@ -1319,6 +1440,7 @@ function App() {
 
 
           {/* MOBILE MENU */}
+
           <button
             className="menu"
             onClick={() =>
@@ -1339,24 +1461,64 @@ function App() {
         </div>
       </header>
 
+
+      {/* =====================================================
+          ROUTES
+      ===================================================== */}
+
       <Routes>
+
+        {/* HOMEPAGE */}
 
         <Route
           path="/"
-          element={<HomePage go={go} />}
+          element={
+            <HomePage go={go} />
+          }
         />
+
+
+        {/* ================================================
+            SEMUA CARD LAYANAN
+
+            Berlaku untuk:
+
+            /layanan/instrumentation-industries
+
+            /layanan/electrical-mechanical
+
+            /layanan/sppbe-lpg-support
+
+            /layanan/engineering-maintenance
+        ================================================= */}
 
         <Route
           path="/layanan/:slug"
-          element={<ServiceDetailPage />}
+          element={
+            <ServiceDetailPage />
+          }
         />
+
+
+        {/* ================================================
+            HALAMAN MITRA SPPBE LPG
+        ================================================= */}
 
         <Route
           path="/mitra-sppbe-lpg"
-          element={<MitraSppbePage />}
+          element={
+            <MitraSppbePage />
+          }
         />
 
       </Routes>
+
+
+      {/* =====================================================
+          JANGAN TUTUP FRAGMENT DI SINI
+
+          FLOATING CONTACT kamu lanjutkan di bawah sini
+      ===================================================== */}
 
       {/* =====================================================
           FLOATING CONTACT BUTTONS
@@ -1576,7 +1738,13 @@ function App() {
             </p>
 
             <button
-              onClick={() => go('home')}
+              onClick={() =>
+                window.scrollTo({
+                  top: 0,
+                  left: 0,
+                  behavior: 'smooth'
+                })
+              }
             >
               Kembali ke atas ↑
             </button>
