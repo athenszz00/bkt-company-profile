@@ -26,6 +26,20 @@ import sctb from './assets/sctb.jpg';
 import occv from './assets/occv.jpg';
 import rtts from './assets/rtts.jpg';
 import ctsi from './assets/ctsi.jpg';
+import foto1 from './assets/foto1.jpg';
+import foto2 from './assets/foto2.jpg';
+import foto3 from './assets/foto3.jpg';
+import foto4 from './assets/foto4.jpg';
+import foto5 from './assets/foto5.jpg';
+import foto6 from './assets/foto6.jpg';
+import foto7 from './assets/foto7.jpg';
+import foto8 from './assets/foto8.jpg';
+import foto9 from './assets/foto9.jpg';
+import foto10 from './assets/foto10.jpg';
+import foto11 from './assets/foto11.jpg';
+import foto12 from './assets/foto12.jpg';
+import foto13 from './assets/foto13.jpg';
+import foto14 from './assets/foto14.jpg';
 
 import pertaminaPatraNiagaLogo from './assets/clients/pertamina-patra-niaga.jpg';
 import freeportLogo from './assets/clients/freeport.png';
@@ -278,8 +292,49 @@ const projectItems = [
   {
     image: ctsi,
     title: 'Callibration Turbine Supervisory Instrument',
+  },
+  {
+    image: foto1,
+  },
+  {
+    image: foto2,
+  },
+  {
+    image: foto3,
+  },
+  {
+    image: foto4,
+  },
+  {
+    image: foto5,
+  },
+  {
+    image: foto6,
+  },
+  {
+    image: foto7,
+  },
+  {
+    image: foto8,
+  },
+  {
+    image: foto9,
+  },
+  {
+    image: foto10,
+  },
+  {
+    image: foto11,
+  },
+  {
+    image: foto12,
+  },
+  {
+    image: foto13,
+  },
+  {
+    image: foto14,
   }
-
 ];
 
 /* =========================================================
