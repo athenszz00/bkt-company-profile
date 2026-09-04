@@ -1557,7 +1557,7 @@ img {
   width: max-content;
   padding-left: var(--carousel-gap);
   will-change: transform;
-  animation: creativeProjectsMarquee 28s linear infinite;
+  animation: creativeProjectsMarquee 120s linear infinite;
 }
 
 .creative-projects:hover .creative-projects__track,
